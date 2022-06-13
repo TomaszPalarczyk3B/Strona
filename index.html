@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| @Doodle | Main site</title>
+    <link rel="stylesheet" href="./popup.css"> 
+    <link rel="stylesheet" href="./style.css"> 
+    <link rel="shortcut icon" href="/assets/logo">
+</head>
+<body>
+    <section class="alert_pop flex_center_column hidden">
+        <h4 class="alert_pop_title wfont fontbold">Alert</h4>
+        <p class="alert_pop_text wfont fontregular">This option is currently not developed, maybe i add this in the next updates!
+            please choose another interactive element!
+        </p>
+    </section>
+    <nav class="flex main_navigation full_width">
+        <a class="heading_logo_container flex">
+            <img src="./assets/logo.png" alt="Doodl img logo" class="logotype-img navbar_logotype">
+            <H1 class="navigation-heading wfont flex">Doodl</H1>
+        </a>
+        <div class="main_nav_rigt_wrapper flex_center">
+            <input type="text" class="input_login username wfont main_nav_searchbar" data-searchbar="searchbar" spellcheck="false"  placeholder="Search..." auto>
+            <span class="input_login main_nav_searchbar_icon flex">
+                <img src="./assets/searchico.svg" alt="search icon">
+            </span>
+            <img src="./assets/Group_6 (1).svg" alt="user profile icon" data-unsupported class="userprofile_icon">
+            <button class="hamburger_menu flex_center_column">
+                <span class="line-1 cross-ham-1"></span>
+                <span class="line-1 plus-line"></span>
+                <span class="line-1 cross-ham-2"></span>
+            </button>
+            <div class="hamburger_menu_wrapper hidden">
+                <li ><button class="show_friends wfont fontbold">friends</button></li>
+                <li ><a data-unsupported class="noline wfont" href="#">Saved</a></li>
+                <li ><a data-unsupported class="noline wfont" href="#">My profile</a></li>
+            </div>
+        </div>
+    </nav>
+    <template data-comments="commenttemplate">
+        <div class="comment flex_center">
+            <div class="flex_center friend_img messenger_friend_img comment_img">
+                <img width="100%" src="./assets/profiles/unknown.jpg" alt="komentujacy">
+            </div>
+            <p class="comment_content fontregular">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, earum.</p>
+        </div>
+    </template>
+        <section class="comments_section flex_center hidden">
+            <template data-comments="commentsWrapperContent">
+                <div class="comments_container flex hidden">
+                    <h2>Make an opinion</h2>
+                    <button class="closeComments fontbold">X</button>
+                    <div class="comments_control_wrapper flex">
+                        <textarea maxlength="100" type="text" placeholder="Comment here..." class="comments_input flex wfont fontregular"></textarea>
+                        <button class="comments_btn_add"><img src="./assets/Path_14.svg" alt="send comment"></button>
+                    </div>
+                    <div class="comments_wrapper">
+                    </div>
+                </div>
+            </template>
+        </section>
+    <section class="messenger_app"> 
+        <div class="mess_app_heading flex">
+            <div class="container_messenger_content_heading flex">
+                <span class="online-ico-item ">
+                    <div class="flex_center friend_img messenger_friend_img">
+                        <img width="100%" src="./assets/profiles/girl2.jpg" alt="active friend icon">
+                    </div>
+                </span>
+                <div class="flex messenger_heading_container">
+                    <h2 class="mess_app_username wfont">Sylvia BOT</h2>
+                    <span class="wfont fontregular" id="messenger_friend_status">Active</span>
+                </div>
+            </div>
+            <button class="close_messenger_btn flex_center_column">
+                <span class="simple_line"></span>
+                <span class="simple_line"></span>
+            </button>
+        </div>
+        <div class="opened_messenger">
+            <div class="chat_container flex">
+                <template data-messenger="message">
+                    <div class="message fontregular">
+                        <p data-messenger="content">Hello, do u want be my friend?</p>
+                    </div>
+                </template>
+                <template data-messenger="usermessage">
+                    <div class="message message_user fontregular wfont flex">
+                        <p data-messenger="contentUser">Hello, do u want be my friend?</p>
+                    </div>
+                </template>
+            </div>
+            <div class="flex">
+                <input type="text" class="messenger_chat_box fontregular" placeholder="Aa...">
+                <button class="messenger_chat_box_btn flex_center"><img src="./assets/Path_14.svg" alt="send message"></button>
+            </div>
+        </div>
+    </section>
+    <section class="flex_center_column">
+        <nav class="category_nav flex">
+            <button class="category_btn flex_center category_btn_selected">Discover</button>
+            <button data-post="createpost" class="category_btn flex_center" style="font-size: 19px;">Add post</button>
+            <button class="category_btn flex_center">Saved</button>
+        </nav>
+        <section class="Friend_list flex">
+            <h2 class="fontbold friendlist_name friendlist_heading">Friends</h2>
+            <template data-friend="template">
+                <div class="friends-container">
+                    <div class="friend_container flex">
+                        <span class="online-ico-item">
+                            <div class="flex_center friend_img">
+                                <img width="100%" src="./assets/profiles/unknown.jpg" alt="active friend icon">
+                            </div>
+                        </span>
+                        <h2 class="fontbold friendlist_name" id="usernameFriend">Alex Smith</h2>
+                    </div>
+            </template>
+        </section>
+        <section class="flex_center_column posts-wrapper">
+            <section class="create_post_section flex_center hidden">
+                <div class="create_post_wrapper flex_center_column">
+                    <span class="close_post_creator">X</span>
+                    <h1>Create a post</h1>
+                    <input type="text" class="input_title wfont fontbold" placeholder="Add a post title...">
+                    <textarea type="text" class="input_desc wfont fontregular" placeholder="Add a post description"></textarea>
+                    <button class="add_post">publish!</button>
+                </div>
+            </section>
+            <template data-post="create">
+                <section class="mainpage social_content_container">
+                    <div class="postline-1 flex">
+                        <div class="profile_pic_box flex_center">
+                            <img width="100%" src="./assets/profiles/unknown.jpg" alt="">
+                        </div>
+                        <div class="postline-1_text_container flex">
+                            <h2 class="fontregular">Guest</h2>
+                            <h3 class="" data-post="title"></h3>
+                        </div>
+                        <img class="post-ico save-icon" alt="save" src="./assets/save.svg">
+                        <img class="post-ico more-icon" alt="more" src="./assets/more.svg">
+                    </div>
+                    <div class="postline-2 flex">
+                        <div class="post_desc">
+                            <h1>Description</h1>
+                            <p data-postdesc="desc"></p>
+                        </div>
+                    </div>
+                    <div class="postline-3 flex"> 
+                        <div class="flex_center">
+                        <button class="post_btn heart_btn"><i class="fa-solid fa-heart"></i></button>
+                        <p class="post_counter  heart_counter fontbold">0</p></div>
+                        <div class="flex_center">
+                        <button class="post_btn comments_btn"><img src="./assets/comments.svg" alt="comments" class="comments_btn_img"></button>
+                        <p class="post_counter comments_counter fontbold">0</p></div>
+                    </div>
+                </section>
+                <section class="mainpage social_content_container">
+            </template>
+            <section class="mainpage social_content_container">
+                <div class="postline-1 flex">
+                    <div class="profile_pic_box flex_center">
+                        <img width="100%" src="./assets/profiles/girl1.jpg" alt="">
+                    </div>
+                    <div class="postline-1_text_container flex">
+                        <h2 class="fontregular">Alex Smith</h2>
+                        <h3 class="">"Waterfall"</h3>
+                    </div>
+                    <img class="post-ico save-icon" alt="save" src="./assets/save.svg">
+                    <img class="post-ico more-icon" alt="more" src="./assets/more.svg">
+                </div>
+                <div class="postline-2 flex">
+                    <div class="post_img_container flex">
+                        <img class="post_img" src="./assets/arts/art1.png" alt="post img">
+                    </div>
+                    <div class="post_desc">
+                        <h1>Description</h1>
+                        <p data-postdesc="desc">Wodospad</p>
+                    </div>
+                </div>
+                <div class="postline-3 flex"> 
+                    <div class="flex_center">
+                    <button class="post_btn heart_btn"><i class="fa-solid fa-heart"></i></button>
+                    <p class="post_counter  heart_counter fontbold">11</p></div>
+                    <div class="flex_center">
+                    <button class="post_btn comments_btn"><img src="./assets/comments.svg" alt="comments" class="comments_btn_img"></button>
+                    <p class="post_counter comments_counter fontbold">0</p></div>
+                </div>
+            </section>
+            <section class="mainpage social_content_container">
+                <div class="postline-1 flex">
+                    <div class="profile_pic_box flex_center">
+                        <img width="100%" src="./assets/profiles/girl3.jpg" alt="">
+                    </div>
+                    <div class="postline-1_text_container flex">
+                        <h2 class="fontregular">Clementine Dietrich</h2>
+                        <h3 class="">"My treehouse"</h3>
+                    </div>
+                    <img class="post-ico save-icon" alt="save" src="./assets/save.svg">
+                    <img class="post-ico more-icon" alt="more" src="./assets/more.svg">
+                </div>
+                <div class="postline-2 flex">
+                    <div class="post_img_container flex">
+                        <img class="post_img" src="./assets/arts/art5.jpg" alt="post img">
+                    </div>
+                    <div class="post_desc">
+                        <h1>Description</h1>
+                        <p data-postdesc="desc"> Drzewo a na nim domek</p>
+                    </div>
+                </div>
+                <div class="postline-3 flex"> 
+                    <div class="flex_center">
+                    <button class="post_btn heart_btn"><i class="fa-solid fa-heart"></i></button>
+                    <p class="post_counter  heart_counter fontbold">120</p></div>
+                    <div class="flex_center">
+                    <button class="post_btn comments_btn"><img src="./assets/comments.svg" alt="comments" class="comments_btn_img"></button>
+                    <p class="post_counter comments_counter fontbold">0</p></div>
+                </div>
+            </section>
+            <section class="mainpage social_content_container">
+                <div class="postline-1 flex">
+                    <div class="profile_pic_box flex_center">
+                        <img width="100%" src="./assets/profiles/girl1.jpg" alt="">
+                    </div>
+                    <div class="postline-1_text_container flex">
+                        <h2 class="fontregular">Alex Smith</h2>
+                        <h3 class="">"Flower boquet"</h3>
+                    </div>
+                    <img class="post-ico save-icon" alt="save" src="./assets/save.svg">
+                    <img class="post-ico more-icon" alt="more" src="./assets/more.svg">
+                </div>
+                <div class="postline-2 flex">
+                    <div class="post_img_container flex">
+                        <img class="post_img" src="./assets/arts/art2.png" alt="post img">
+                    </div>
+                    <div class="post_desc">
+                        <h1>Description</h1>
+                        <p data-postdesc="desc"> Bukiet </p>
+                    </div>
+                </div>
+                <div class="postline-3 flex"> 
+                    <div class="flex_center">
+                    <button class="post_btn heart_btn"><i class="fa-solid fa-heart "></i></button>
+                    <p class="post_counter  heart_counter fontbold">3443</p></div>
+                    <div class="flex_center">
+                    <button class="post_btn comments_btn"><img src="./assets/comments.svg" alt="comments" class="comments_btn_img"></button>
+                    <p class="post_counter comments_counter fontbold">0</p></div>
+                </div>
+            </section>
+            <section class="mainpage social_content_container">
+                <div class="postline-1 flex">
+                    <div class="profile_pic_box flex_center">
+                        <img width="100%" src="./assets/profiles/user2.jpg" alt="">
+                    </div>
+                    <div class="postline-1_text_container flex">
+                        <h2 class="fontregular">Joshua S</h2>
+                        <h3 class="">"My first landscape"</h3>
+                    </div>
+                    <img class="post-ico save-icon" alt="save" src="./assets/save.svg">
+                    <img class="post-ico more-icon" alt="more" src="./assets/more.svg">
+                </div>
+                <div class="postline-2 flex">
+                    <div class="post_img_container flex">
+                        <img class="post_img" src="./assets/arts/R.jpg" alt="post img">
+                    </div>
+                    <div class="post_desc">
+                        <h1>Description</h1>
+                        <p data-postdesc="desc">Pejzarz mojego autorstwa :)!</p>
+                    </div>
+                </div>
+                <div class="postline-3 flex"> 
+                    <div class="flex_center">
+                    <button class="post_btn heart_btn"><i class="fa-solid fa-heart "></i></button>
+                    <p class="post_counter  heart_counter fontbold">126</p></div>
+                    <div class="flex_center">
+                    <button class="post_btn comments_btn"><img src="./assets/comments.svg" alt="comments" class="comments_btn_img"></button>
+                    <p class="post_counter comments_counter fontbold">0</p></div>
+                </div>
+            </section>
+            <section class="mainpage social_content_container">
+                <div class="postline-1 flex">
+                    <div class="profile_pic_box flex_center">
+                        <img width="100%" src="./assets/profiles/girl1.jpg" alt="">
+                    </div>
+                    <div class="postline-1_text_container flex">
+                        <h2 class="fontregular">Alex Smith</h2>
+                        <h3 class="title">"Still life"</h3>
+                    </div>
+                    <img class="post-ico save-icon" alt="save" src="./assets/save.svg">
+                    <img class="post-ico more-icon" alt="more" src="./assets/more.svg">
+                </div>
+                <div class="postline-2 flex">
+                    <div class="post_img_container flex">
+                        <img class="post_img" src="./assets/arts/art6.jpg" alt="post img">
+                    </div>
+                    <div class="post_desc">
+                        <h1>Description</h1>
+                        <p data-postdesc="desc">Martwa natura</p>
+                    </div>
+                </div>
+                <div class="postline-3 flex"> 
+                    <div class="flex_center">
+                    <button class="post_btn heart_btn"><i class="fa-solid fa-heart "></i></button>
+                    <p class="post_counter  heart_counter fontbold">3443</p></div>
+                    <div class="flex_center">
+                    <button class="post_btn comments_btn"><img src="./assets/comments.svg" alt="comments" class="comments_btn_img"></button>
+                    <p class="post_counter comments_counter fontbold">0</p></div>
+                </div>
+            </section>
+            <section class="mainpage social_content_container">
+                <div class="postline-1 flex">
+                    <div class="profile_pic_box flex_center">
+                        <img width="100%" src="./assets/profiles/girl1.jpg" alt="">
+                    </div>
+                    <div class="postline-1_text_container flex">
+                        <h2 class="fontregular">Alex Smith</h2>
+                        <h3 class="">"Flower boquet"</h3>
+                    </div>
+                    <img class="post-ico save-icon" alt="save" src="./assets/save.svg">
+                    <img class="post-ico more-icon" alt="more" src="./assets/more.svg">
+                </div>
+                <div class="postline-2 flex">
+                    <div class="post_img_container flex">
+                        <img class="post_img" src="./assets/arts/art2.png" alt="post img">
+                    </div>
+                    <div class="post_desc">
+                        <h1>Description</h1>
+                        <p data-postdesc="desc">Kwiaty </p>
+                    </div>
+                </div>
+                <div class="postline-3 flex"> 
+                    <div class="flex_center">
+                    <button class="post_btn heart_btn"><i class="fa-solid fa-heart "></i></button>
+                    <p class="post_counter  heart_counter fontbold">3443</p></div>
+                    <div class="flex_center">
+                    <button class="post_btn comments_btn"><img src="./assets/comments.svg" alt="comments" class="comments_btn_img"></button>
+                    <p class="post_counter comments_counter fontbold">0</p></div>
+                </div>
+            </section>
+            <section class="mainpage social_content_container">
+                <div class="postline-1 flex">
+                    <div class="profile_pic_box flex_center">
+                        <img width="100%" src="./assets/profiles/unknown.jpg" alt="">
+                    </div>
+                    <div class="postline-1_text_container flex">
+                        <h2 class="fontregular">Dennis Howell</h2>
+                        <h3 class="">"Tree by the lake"</h3>
+                    </div>
+                    <img class="post-ico save-icon" alt="save" src="./assets/save.svg">
+                    <img class="post-ico more-icon" alt="more" src="./assets/more.svg">
+                </div>
+                <div class="postline-2 flex">
+                    <div class="post_img_container flex">
+                        <img class="post_img" src="./assets/arts/art7.jpg" alt="post img">
+                    </div>
+                    <div class="post_desc">
+                        <h1>Description</h1>
+                        <p data-postdesc="desc">Drzewo nad jeziorem</p>
+                    </div>
+                </div>
+                <div class="postline-3 flex"> 
+                    <div class="flex_center">
+                    <button class="post_btn heart_btn"><i class="fa-solid fa-heart "></i></button>
+                    <p class="post_counter  heart_counter fontbold">2</p></div>
+                    <div class="flex_center">
+                    <button class="post_btn comments_btn"><img src="./assets/comments.svg" alt="comments" class="comments_btn_img"></button>
+                    <p class="post_counter comments_counter fontbold">0</p></div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <footer class="main_footer flex_center_column">
+        <p class="author wfont fontregular">Developed by: <a 
+            target="_blank" rel="nofollow"
+            href="https://www.facebook.com/profile.php?id=100004572108865">Tomasz Palarczyk</a>
+
+            </p>
+        <p class="footer_info wfont fontregular">2022-2022 © all rights reserved</p>
+    </footer>
+    <script src="./pop-animation.js"></script>
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/249c432a0e.js" crossorigin="anonymous"></script>
+</body>
+</html>

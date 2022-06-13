@@ -1,0 +1,23 @@
+<svg id="g10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.058" height="56.058" viewBox="0 0 56.058 56.058">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-2 {
+        fill: #be1931;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="path18" d="M0-47.5H56.058V8.558H0Z" transform="translate(0 47.5)"/>
+    </clipPath>
+  </defs>
+  <g id="g12" transform="translate(0 0)">
+    <g id="g14" class="cls-1">
+      <g id="g20" transform="translate(1.645 4.375)">
+        <path id="path22" class="cls-2" d="M8.056,2.222A14.557,14.557,0,0,0-6.5-12.335,14.53,14.53,0,0,0-18.328-6.244a14.527,14.527,0,0,0-11.827-6.091A14.557,14.557,0,0,0-44.712,2.222a14.536,14.536,0,0,0,.392,3.306C-42.3,18.086-28.336,31.336-18.328,34.974-8.322,31.336,5.643,18.086,7.661,5.528a14.373,14.373,0,0,0,.4-3.306" transform="translate(44.712 12.335)"/>
+      </g>
+    </g>
+  </g>
+</svg>
